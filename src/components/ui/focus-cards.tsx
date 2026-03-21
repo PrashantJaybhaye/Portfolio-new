@@ -2,98 +2,166 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { cn } from "@/lib/utils";
 
-export const Card = React.memo(
-  ({
-    card,
-    index,
-    hovered,
-    setHovered,
-  }: {
-    card: any;
-    index: number;
-    hovered: number | null;
-    setHovered: React.Dispatch<React.SetStateAction<number | null>>;
-  }) => (
-    <div
-      onMouseEnter={() => setHovered(index)}
-      onMouseLeave={() => setHovered(null)}
-      onTouchStart={() => setHovered(index)}
-      onTouchEnd={() => setHovered(null)}
-      className={cn(
-        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out cursor-pointer",
-        hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
-      )}
-    >
-      <Link href={`/blog/${card.slug}`}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="absolute inset-0"
-        >
-          <motion.img
-            src={card.src}
-            alt={card.title}
-            style={{ width: '100%', height: '100%', position: 'absolute' }}
-            className="object-cover absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          />
-        </motion.div>
-      </Link>
-      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-        <div className="text-xl md:text-2xl font-medium text-white text-center px-4">
-          {card.title}
-        </div>
-      </div>
-    </div>
-  )
-);
-
-Card.displayName = "Card";
-
-interface Card {
+interface CardItem {
   title: string;
   src: string;
   slug: string;
+  excerpt?: string;
 }
 
-export const FocusCards = ({ cards }: { cards: Card[] }) => {
-  const [hovered, setHovered] = useState<number | null>(null);
+// ── Single horizontal row card ────────────────────────────────
+function ArticleRow({ card, index, hovered, setHovered }: {
+  card: CardItem;
+  index: number;
+  hovered: number | null;
+  setHovered: React.Dispatch<React.SetStateAction<number | null>>;
+}) {
+  const active = hovered === index
+  const dimmed = hovered !== null && !active
 
   return (
-    <div className="grid grid-cols-2 gap-4 px-4 max-w-4xl mx-auto">
-      {cards.map((card, i) => (
-        <Link href={`/blog/${card.slug}`} key={i}>
-          <div
-            onMouseEnter={() => setHovered(i)}
-            onMouseLeave={() => setHovered(null)}
-            onTouchStart={() => setHovered(i)}
-            onTouchEnd={() => setHovered(null)}
-            className={cn(
-              "relative h-[300px] sm:h-[400px] overflow-hidden rounded-lg transition-all duration-300 cursor-pointer",
-              hovered !== null && hovered !== i && "blur-sm scale-95"
-            )}
-          >
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      onMouseEnter={() => setHovered(index)}
+      onMouseLeave={() => setHovered(null)}
+      className="relative group"
+      style={{
+        opacity: dimmed ? 0.35 : 1,
+        transition: "opacity 0.4s ease",
+      }}
+    >
+      <Link href={`/blog/${card.slug}`}>
+        <div
+          className="relative flex flex-col sm:flex-row gap-0 overflow-hidden rounded-2xl cursor-pointer"
+          style={{
+            border: active
+              ? "1px solid rgba(220,38,38,0.4)"
+              : "1px solid rgba(255,255,255,0.06)",
+            background: active
+              ? "rgba(220,38,38,0.04)"
+              : "rgba(255,255,255,0.02)",
+            boxShadow: active ? "0 0 50px rgba(220,38,38,0.12)" : "none",
+            transition: "all 0.4s cubic-bezier(0.23,1,0.32,1)",
+          }}
+        >
+          {/* ── Image panel ── */}
+          <div className="relative sm:w-[42%] aspect-[16/9] sm:aspect-auto sm:h-[240px] overflow-hidden flex-shrink-0">
             <motion.img
               src={card.src}
               alt={card.title}
-              className="h-full w-full object-cover"
-              initial={{ scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
+              className="w-full h-full object-cover"
+              animate={{ scale: active ? 1.06 : 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             />
-            <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-              <h3 className="text-base sm:text-2xl font-bold text-white text-center px-4">
+            {/* dim layer */}
+            <div className="absolute inset-0" style={{
+              background: active
+                ? "linear-gradient(135deg,rgba(220,38,38,0.25) 0%,rgba(0,0,0,0.4) 100%)"
+                : "rgba(0,0,0,0.35)"
+            }} />
+            {/* Red vertical stripe on right edge */}
+            <motion.div
+              className="absolute inset-y-0 right-0 w-[3px]"
+              animate={{ opacity: active ? 1 : 0 }}
+              style={{ background: "linear-gradient(to bottom,transparent,#dc2626,transparent)" }}
+            />
+          </div>
+
+          {/* ── Text panel ── */}
+          <div className="flex-1 flex flex-col justify-between p-6 sm:p-8 min-h-[160px]">
+            <div>
+              {/* Index + category row */}
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[9px] font-black uppercase tracking-[0.35em]"
+                  style={{ color: "rgba(220,38,38,0.7)" }}>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="h-px flex-1 max-w-[40px]"
+                  style={{ background: active ? "rgba(220,38,38,0.5)" : "rgba(255,255,255,0.08)" }} />
+                <span className="text-[9px] font-bold uppercase tracking-[0.2em]"
+                  style={{ color: "rgba(255,255,255,0.2)" }}>
+                  Article
+                </span>
+              </div>
+
+              {/* Title */}
+              <h2
+                className="font-black leading-tight mb-3"
+                style={{
+                  fontSize: "clamp(1.15rem, 2.5vw, 1.55rem)",
+                  color: active ? "#ffffff" : "rgba(255,255,255,0.85)",
+                  transition: "color 0.3s",
+                }}
+              >
                 {card.title}
-              </h3>
+              </h2>
+
+              {card.excerpt && (
+                <p className="text-sm leading-relaxed line-clamp-2"
+                  style={{ color: "rgba(255,255,255,0.25)" }}>
+                  {card.excerpt}
+                </p>
+              )}
+            </div>
+
+            {/* Bottom row: CTA */}
+            <div className="flex items-center justify-between mt-6">
+              <motion.div
+                animate={{
+                  x: active ? 0 : -6,
+                  opacity: active ? 1 : 0.4
+                }}
+                transition={{ duration: 0.3 }}
+                className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.25em]"
+                style={{ color: active ? "#dc2626" : "rgba(255,255,255,0.3)" }}
+              >
+                Read Article
+                <motion.svg
+                  animate={{ x: active ? 3 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  width="11" height="11" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </motion.svg>
+              </motion.div>
+
+              {/* Animated underline bar */}
+              <motion.div
+                animate={{ width: active ? "48px" : "20px" }}
+                className="h-[2px] rounded-full"
+                style={{ background: active ? "#dc2626" : "rgba(255,255,255,0.08)" }}
+                transition={{ duration: 0.4 }}
+              />
             </div>
           </div>
-        </Link>
+        </div>
+      </Link>
+    </motion.div>
+  )
+}
+
+// ── Feed list ────────────────────────────────────────────────
+export const FocusCards = ({ cards }: { cards: CardItem[] }) => {
+  const [hovered, setHovered] = useState<number | null>(null)
+
+  return (
+    <div className="flex flex-col gap-4 w-full">
+      {cards.map((card, i) => (
+        <ArticleRow
+          key={card.slug || i}
+          card={card}
+          index={i}
+          hovered={hovered}
+          setHovered={setHovered}
+        />
       ))}
     </div>
-  );
-};
+  )
+}
+
+// Re-export Card alias for focus-cards internal use (not used externally)
+export const Card = ArticleRow
