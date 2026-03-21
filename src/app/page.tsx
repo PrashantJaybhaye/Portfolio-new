@@ -29,8 +29,8 @@ export default function Page() {
   return (
     <>
 
-  <Analytics />
-      <div className="h-[200rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
+      <Analytics />
+      <div className="h-[213rem] sm:h-[198rem] md:h-[168rem] lg:h-[158rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
 
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
@@ -43,171 +43,171 @@ export default function Page() {
         <img
           src="/PFP.jpg"
           alt="Wali"
-          className="rounded-full h-80 w-50 absolute top-[calc(3%+2rem)] left-1/2 transform -translate-x-1/2 opacity-85"
+          className="rounded-full h-80 w-50 absolute top-[8rem] left-1/2 transform -translate-x-1/2 opacity-85"
         />
 
         {/* <div className="absolute top-[calc(0%+0rem)] right-0">
         <Number />
         </div> */}
 
-<div className ="cursor-pointer ">
+        <div className="cursor-pointer ">
 
 
-<GitHubIcon
-  sx={{
-    background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
-    borderRadius: "30%",
-    padding: "8px",
-    color: "white",
-    opacity: "0.8",
-    transition: "opacity 0.3s ease",
-    "&:hover": {
-      opacity: "1",
-    },
-    "&:active": {
-      opacity: "1",
-    },
-  }}
-  fontSize="large" 
-  onClick={() => window.open("https://github.com/waliilaw/")}
-  className="absolute top-[calc(5%+2rem)] left-[calc(20%-2rem)]"
-/>
+          <GitHubIcon
+            sx={{
+              background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
+              borderRadius: "30%",
+              padding: "8px",
+              color: "white",
+              opacity: "0.8",
+              transition: "opacity 0.3s ease",
+              "&:hover": {
+                opacity: "1",
+              },
+              "&:active": {
+                opacity: "1",
+              },
+            }}
+            fontSize="large"
+            onClick={() => window.open("https://github.com/waliilaw/")}
+            className="absolute top-[12rem] left-[calc(20%-2rem)]"
+          />
 
-<InstagramIcon
-sx={{
-  background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
-  borderRadius: "30%",
-  padding: "8px",
-  color: "white",
-  opacity: "0.8",
-  transition: "opacity 0.3s ease",
-  "&:hover": {
-    opacity: "1",
-  },
-  "&:active": {
-    opacity: "1",
-  },
-}}
-  fontSize="large"
-  onClick={() => window.open("https://www.instagram.com/waliilaww/")}
-  className="absolute top-[calc(5%+2rem)] right-[calc(21%-2rem)]"
-/>
+          <InstagramIcon
+            sx={{
+              background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
+              borderRadius: "30%",
+              padding: "8px",
+              color: "white",
+              opacity: "0.8",
+              transition: "opacity 0.3s ease",
+              "&:hover": {
+                opacity: "1",
+              },
+              "&:active": {
+                opacity: "1",
+              },
+            }}
+            fontSize="large"
+            onClick={() => window.open("https://www.instagram.com/waliilaww/")}
+            className="absolute top-[12rem] right-[calc(21%-2rem)]"
+          />
 
-<LinkedInIcon
- sx={{
-  background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
-    borderRadius: "30%",
-    padding: "8px",
-    color: "white",
-    opacity: "0.8",
-    transition: "opacity 0.3s ease",
-    "&:hover": {
-      opacity: "1",
-    },
-    "&:active": {
-      opacity: "1",
-    },
-}}
-  fontSize="large"
-  onClick={() => window.open("https://www.linkedin.com/in/humaidwali20/")}
-  className="absolute top-[calc(7.5%+2rem)] left-[calc(20%-2rem)]"
-/>
+          <LinkedInIcon
+            sx={{
+              background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
+              borderRadius: "30%",
+              padding: "8px",
+              color: "white",
+              opacity: "0.8",
+              transition: "opacity 0.3s ease",
+              "&:hover": {
+                opacity: "1",
+              },
+              "&:active": {
+                opacity: "1",
+              },
+            }}
+            fontSize="large"
+            onClick={() => window.open("https://www.linkedin.com/in/humaidwali20/")}
+            className="absolute top-[17rem] left-[calc(20%-2rem)]"
+          />
 
-<GraphicEqIcon sx={{
-    background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
-    borderRadius: "30%",
-    padding: "8px",
-    color: "white",
-    opacity: "0.8",
-    transition: "opacity 0.3s ease",
-    "&:hover": {
-      opacity: "1",
-    },
-    "&:active": {
-      opacity: "1",
-    },
-  }}
-  fontSize="large"
-  onClick={() => {window.open("https://music.youtube.com/playlist?list=PLpW-D5yMNMq3t6vjZAtMmIR-ZbxrtoLrj&si=7tVUFHhSVgyOXIyl")}}
-  className="absolute top-[calc(7.5%+2rem)] right-[calc(21%-2rem)]" 
-  />
+          <GraphicEqIcon sx={{
+            background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
+            borderRadius: "30%",
+            padding: "8px",
+            color: "white",
+            opacity: "0.8",
+            transition: "opacity 0.3s ease",
+            "&:hover": {
+              opacity: "1",
+            },
+            "&:active": {
+              opacity: "1",
+            },
+          }}
+            fontSize="large"
+            onClick={() => { window.open("https://music.youtube.com/playlist?list=PLpW-D5yMNMq3t6vjZAtMmIR-ZbxrtoLrj&si=7tVUFHhSVgyOXIyl") }}
+            className="absolute top-[17rem] right-[calc(21%-2rem)]"
+          />
 
-<XIcon
-sx={{
-  background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
-    borderRadius: "30%",
-    padding: "8px",
-    color: "white",
-    opacity: "0.8",
-    transition: "opacity 0.3s ease",
-    "&:hover": {
-      opacity: "1",
-    },
-    "&:active": {
-      opacity: "1",
-    },
-}}
-  fontSize="large"
-  onClick={() => window.open("https://x.com/Waliilaww")}
-  className="absolute top-[calc(10%+2rem)] left-[calc(20%-2rem)]"
-/>
+          <XIcon
+            sx={{
+              background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
+              borderRadius: "30%",
+              padding: "8px",
+              color: "white",
+              opacity: "0.8",
+              transition: "opacity 0.3s ease",
+              "&:hover": {
+                opacity: "1",
+              },
+              "&:active": {
+                opacity: "1",
+              },
+            }}
+            fontSize="large"
+            onClick={() => window.open("https://x.com/Waliilaww")}
+            className="absolute top-[22rem] left-[calc(20%-2rem)]"
+          />
 
-<CodeIcon
-  sx={{
-    background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
-    borderRadius: "30%",
-    padding: "8px",
-    color: "white",
-    opacity: "0.8",
-    transition: "opacity 0.3s ease",
-    "&:hover": {
-      opacity: "1",
-    },
-    "&:active": {
-      opacity: "1",
-    },
-  }}
-  fontSize="large"
-  onClick={() => window.open("https://leetcode.com/u/waliilaw/")}
-  className="absolute top-[calc(10%+2rem)] right-[calc(21%-2rem)]"
-/>
-</div>
-
-        <Stack />        
-        
-        <div className="  absolute top-[calc(14.6%+2rem)] left-[calc(18%-2rem)] right-[calc(21%-2rem)]">
-        <Type />
+          <CodeIcon
+            sx={{
+              background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
+              borderRadius: "30%",
+              padding: "8px",
+              color: "white",
+              opacity: "0.8",
+              transition: "opacity 0.3s ease",
+              "&:hover": {
+                opacity: "1",
+              },
+              "&:active": {
+                opacity: "1",
+              },
+            }}
+            fontSize="large"
+            onClick={() => window.open("https://leetcode.com/u/waliilaw/")}
+            className="absolute top-[22rem] right-[calc(21%-2rem)]"
+          />
         </div>
 
-<div className='absolute top-[calc(39%+8rem)]  pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-400 to-black bg-clip-text text-center text-2xl font-semibold leading-none text-transparent dark:from-black dark:to-white'>
-Here are some of my
-</div>
+        <Stack />
 
-      <div className="absolute top-[calc(42%+5rem)]  pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-400 to-black bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-black dark:to-gray-100 ">
-        ProJects
+        <div className="absolute top-[31.2rem] left-[calc(18%-2rem)] right-[calc(21%-2rem)]">
+          <Type />
+        </div>
+
+        <div className='absolute top-[90rem] pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-400 to-black bg-clip-text text-center text-2xl font-semibold leading-none text-transparent dark:from-black dark:to-white'>
+          Here are some of my
+        </div>
+
+        <div className="absolute top-[92rem] pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-400 to-black bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-black dark:to-gray-100 ">
+          ProJects
+        </div>
+
+        <div className='absolute top-[106rem] w-full lg:w-auto px-4 lg:px-0'>
+
+          <Projects />
+
+        </div>
+
+
       </div>
-
-<div className='absolute bottom-0 '>
-
-      <Projects/>
-
-</div>
-
-
-</div>
-        {/* <Tweet id="your-tweet-id" apiUrl="https://x.com/Waliilaww/status/1882463874462749016" /> */}
-        {/* <div className='absolute bottom-[calc(10%+2rem)'>
+      {/* <Tweet id="your-tweet-id" apiUrl="https://x.com/Waliilaww/status/1882463874462749016" /> */}
+      {/* <div className='absolute bottom-[calc(10%+2rem)'>
         <Scroll />
         </div>
       </div> */}
 
       {/* Blog Button */}
-     
-        <Link href="/blog">
-          <button className="bg-orange-500 hover:bg-orange-700 text-white px-11 py-5 rounded-full text-lg font-semibold transition-colors duration-300 transform hover:scale-100 absolute top-[calc(0%+0.8rem)] left-[calc(0%-1rem)] h-2 w-5 flex items-center justify-center">
-            Blog
-          </button>
-        </Link>
+
+      <Link href="/blog">
+        <button className="bg-orange-500 hover:bg-orange-700 text-white px-11 py-5 rounded-full text-lg font-semibold transition-colors duration-300 transform hover:scale-100 absolute top-[calc(0%+0.8rem)] left-[calc(0%-1rem)] h-2 w-5 flex items-center justify-center">
+          Blog
+        </button>
+      </Link>
 
     </>
   )
