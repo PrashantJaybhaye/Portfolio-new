@@ -15,6 +15,15 @@ export async function GET(
           include: {
             category: true
           }
+        },
+        comments: {
+          take: 10,
+          include: {
+            author: true
+          },
+          orderBy: {
+            createdAt: 'desc'
+          }
         }
       }
     })

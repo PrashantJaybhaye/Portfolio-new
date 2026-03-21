@@ -40,8 +40,10 @@ model Comment {
   content   String
   postId    String
   post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
-  authorId  String
-  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  String?
+  author    User?    @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  guestName String?
+  adminReply String?
   createdAt DateTime @default(now())
 }
 

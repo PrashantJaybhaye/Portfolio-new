@@ -103,5 +103,6 @@ export default {
 	  );
 	},
 	require("tailwindcss-animate"),
+	require("@tailwindcss/typography"),
   ],
 } satisfies Config;

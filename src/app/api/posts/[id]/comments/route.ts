@@ -7,22 +7,14 @@ export async function POST(
 ) {
   try {
     const resolvedParams = await params
-    const { content } = await request.json()
-
-    // For now, we'll use the test user as the author
-    const author = await prisma.user.findFirst()
-    if (!author) {
-      return NextResponse.json(
-        { error: 'No author found' },
-        { status: 400 }
-      )
-    }
+    const { content, name } = await request.json()
 
     const comment = await prisma.comment.create({
       data: {
         content,
         postId: resolvedParams.id,
-        authorId: author.id,
+        // @ts-ignore
+        guestName: name || 'Anonymous User',
       },
       include: {
         author: {

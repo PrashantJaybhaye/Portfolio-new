@@ -2,15 +2,15 @@ export default function LoadingSpinner() {
   return (
     <div className="fixed inset-0 bg-black text-white flex items-center justify-center z-50">
       <div className="flex flex-col items-center">
-        <img 
+        <img
           src="/Loading.gif"
           alt=""
-          style={{ 
+          style={{
             width: 'auto',
             height: '100vh',
             transform: 'scale(1)',
-            
-            // objectFit: 'cover',
+
+            objectFit: 'cover',
             objectPosition: 'center',
           }}
         />

@@ -3,7 +3,7 @@
 import { signOut } from 'next-auth/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Plus, List, LogOut, Shield } from 'lucide-react'
+import { Plus, List, LogOut, Shield, MessageSquare } from 'lucide-react'
 
 export default function AdminNav() {
   const pathname = usePathname()
@@ -11,6 +11,7 @@ export default function AdminNav() {
   const navItems = [
     { href: '/admin', label: 'Create', icon: Plus },
     { href: '/admin/manage', label: 'Posts', icon: List },
+    { href: '/admin/comments', label: 'Comments', icon: MessageSquare },
   ]
 
   return (
