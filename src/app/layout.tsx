@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import ClientLayout from "./ClientLayout";
 import { Toaster } from "react-hot-toast";
 
@@ -14,8 +13,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Wali | ilaW",
@@ -31,9 +28,8 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/favicon.ico" />
       </head>
-      <body suppressHydrationWarning className={`${geistSans.className} ${geistMono.className} ${inter.className}`}>
+      <body suppressHydrationWarning className={`${geistSans.className} ${geistMono.variable} antialiased`}>
         <ClientLayout>{children}</ClientLayout>
         <Toaster position="bottom-right" toastOptions={{ className: 'bg-gray-800 text-white border border-gray-700' }} />
       </body>
