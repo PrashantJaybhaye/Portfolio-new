@@ -140,7 +140,7 @@ export default function Page() {
               },
             }}
             fontSize="large"
-            onClick={() => { }}
+            onClick={() => window.open("https://x.com/prashantjaybhye")}
             className="absolute top-100 left-[calc(20%-2rem)]"
           />
 
