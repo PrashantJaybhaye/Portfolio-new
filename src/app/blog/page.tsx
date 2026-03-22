@@ -91,8 +91,8 @@ export default function BlogPage() {
 
         {/* ── Corner Home badge — mirrors homepage Blog button, top-right ── */}
         <Link href="/" className="absolute top-0 right-0 z-50">
-          <button className="bg-red-600 hover:bg-red-700 text-white px-11 py-5 rounded-full text-lg font-semibold transition-colors duration-300 transform hover:scale-100 absolute top-[calc(0%+0.8rem)] right-[calc(0%-1rem)] h-2 w-5 flex items-center justify-center">
-            Home<span>&nbsp;&nbsp;</span>
+          <button className="bg-red-600 hover:bg-red-700 text-white px-14 py-5 rounded-full text-lg font-semibold transition-colors duration-300 transform hover:scale-100 absolute top-[calc(0%+0.8rem)] right-[calc(0%-1rem)] h-2 w-20 flex items-center justify-center">
+            Home<span>&nbsp;</span>
           </button>
         </Link>
 

@@ -2,13 +2,8 @@
 import { Stack } from '../components/Stack';
 import React, { useEffect } from "react";
 import { Type } from '@/components/Type';
-// import {Tweet} from '../components/Tweet';
-// import { Number } from "@/components/Number";
 import { Analytics } from "@vercel/analytics/react"
-import { motion } from "framer-motion"
 import Link from "next/link"
-// import Image from "next/image"
-
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import XIcon from '@mui/icons-material/X';
@@ -16,10 +11,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import CodeIcon from '@mui/icons-material/Code';
 import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 import Projects from '@/components/Projects';
-// import { Connect } from '@/components/Connect';
 
-
-// import { Scroll } from "@/components/Scroll";
 export default function Page() {
   useEffect(() => {
     // Force dark mode on the entire site
@@ -30,20 +22,20 @@ export default function Page() {
     <>
 
       <Analytics />
-      <div className="h-[213rem] sm:h-[198rem] md:h-[168rem] lg:h-[158rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
+      <div className="h-[213rem] sm:h-[198rem] md:h-[168rem] lg:h-[158rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center overflow-x-hidden">
 
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-        <p className="text-6xl sm:text-7xl font-bold absolute top-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
+        <p className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold absolute top-16 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 whitespace-nowrap">
           Hi! I&apos;m{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-b from-orange-200 to-orange-600 py-8">Wali</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-b from-orange-200 to-orange-600 py-8">Prashant</span>
         </p>
 
         {/* Image below the text with margin-top */}
         <img
           src="/PFP.jpg"
-          alt="Wali"
-          className="rounded-full h-80 w-50 absolute top-[8rem] left-1/2 transform -translate-x-1/2 opacity-85"
+          alt="Prashant"
+          className="rounded-full h-80 w-50 absolute top-[11rem] left-1/2 transform -translate-x-1/2 opacity-85"
         />
 
         {/* <div className="absolute top-[calc(0%+0rem)] right-0">
@@ -69,8 +61,8 @@ export default function Page() {
               },
             }}
             fontSize="large"
-            onClick={() => window.open("https://github.com/waliilaw/")}
-            className="absolute top-[12rem] left-[calc(20%-2rem)]"
+            onClick={() => window.open("https://github.com/prashantjaybhaye")}
+            className="absolute top-[15rem] left-[calc(20%-2rem)]"
           />
 
           <InstagramIcon
@@ -89,8 +81,8 @@ export default function Page() {
               },
             }}
             fontSize="large"
-            onClick={() => window.open("https://www.instagram.com/waliilaww/")}
-            className="absolute top-[12rem] right-[calc(21%-2rem)]"
+            onClick={() => window.open("https://www.instagram.com/prashanttt__214")}
+            className="absolute top-[15rem] right-[calc(21%-2rem)]"
           />
 
           <LinkedInIcon
@@ -109,8 +101,8 @@ export default function Page() {
               },
             }}
             fontSize="large"
-            onClick={() => window.open("https://www.linkedin.com/in/humaidwali20/")}
-            className="absolute top-[17rem] left-[calc(20%-2rem)]"
+            onClick={() => { }}
+            className="absolute top-[20rem] left-[calc(20%-2rem)]"
           />
 
           <GraphicEqIcon sx={{
@@ -128,8 +120,8 @@ export default function Page() {
             },
           }}
             fontSize="large"
-            onClick={() => { window.open("https://music.youtube.com/playlist?list=PLpW-D5yMNMq3t6vjZAtMmIR-ZbxrtoLrj&si=7tVUFHhSVgyOXIyl") }}
-            className="absolute top-[17rem] right-[calc(21%-2rem)]"
+            onClick={() => { }}
+            className="absolute top-[20rem] right-[calc(21%-2rem)]"
           />
 
           <XIcon
@@ -148,8 +140,8 @@ export default function Page() {
               },
             }}
             fontSize="large"
-            onClick={() => window.open("https://x.com/Waliilaww")}
-            className="absolute top-[22rem] left-[calc(20%-2rem)]"
+            onClick={() => { }}
+            className="absolute top-[25rem] left-[calc(20%-2rem)]"
           />
 
           <CodeIcon
@@ -168,14 +160,14 @@ export default function Page() {
               },
             }}
             fontSize="large"
-            onClick={() => window.open("https://leetcode.com/u/waliilaw/")}
-            className="absolute top-[22rem] right-[calc(21%-2rem)]"
+            onClick={() => { }}
+            className="absolute top-[25rem] right-[calc(21%-2rem)]"
           />
         </div>
 
         <Stack />
 
-        <div className="absolute top-[31.2rem] left-[calc(18%-2rem)] right-[calc(21%-2rem)]">
+        <div className="absolute top-[34.2rem] left-[calc(18%-2rem)] right-[calc(21%-2rem)]">
           <Type />
         </div>
 
@@ -195,17 +187,19 @@ export default function Page() {
 
 
       </div>
-      {/* <Tweet id="your-tweet-id" apiUrl="https://x.com/Waliilaww/status/1882463874462749016" /> */}
-      {/* <div className='absolute bottom-[calc(10%+2rem)'>
-        <Scroll />
-        </div>
-      </div> */}
 
       {/* Blog Button */}
 
       <Link href="/blog">
-        <button className="bg-orange-500 hover:bg-orange-700 text-white px-11 py-5 rounded-full text-lg font-semibold transition-colors duration-300 transform hover:scale-100 absolute top-[calc(0%+0.8rem)] left-[calc(0%-1rem)] h-2 w-5 flex items-center justify-center">
+        <button className="bg-orange-500 hover:bg-orange-700 text-white px-14 py-5 rounded-full text-lg font-semibold transition-colors duration-300 transform hover:scale-100 absolute top-[calc(0%+0.8rem)] left-[calc(0%-1rem)] h-2 w-20 flex items-center justify-center">
           Blog
+        </button>
+      </Link>
+
+      {/* Contact Button */}
+      <Link href="/contact">
+        <button className="bg-orange-500 hover:bg-orange-700 text-white px-14 py-5 rounded-full text-lg font-semibold transition-colors duration-300 transform hover:scale-100 absolute top-[calc(0%+0.8rem)] right-[calc(0%-1rem)] h-2 w-20 flex items-center justify-center">
+          Contact<span>&nbsp;</span>
         </button>
       </Link>
 
