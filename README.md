@@ -101,7 +101,7 @@ npm run dev
 
 ## 📫 Connect with Me
 
-- **LinkedIn:** [Prashant Jaybhaye](https://www.linkedin.com/in/prashant-jaybhaye)
+- **LinkedIn:** [Prashant Jaybhaye](https://www.linkedin.com/in/prashant-jaybhaye/)
 - **GitHub:** [@prashantjaybhaye](https://github.com/prashantjaybhaye)
 - **Instagram:** [@prashanttt\_\_214](https://www.instagram.com/prashanttt__214)
 

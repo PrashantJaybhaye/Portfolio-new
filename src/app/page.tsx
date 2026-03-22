@@ -22,20 +22,20 @@ export default function Page() {
     <>
 
       <Analytics />
-      <div className="h-[213rem] sm:h-[198rem] md:h-[168rem] lg:h-[158rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center overflow-x-hidden">
+      <div className="h-852 sm:h-792 md:h-672 lg:h-632 w-full dark:bg-black bg-white dark:bg-grid-white/20 bg-grid-black/20 relative flex items-center justify-center overflow-x-hidden">
 
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-        <p className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold absolute top-16 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 whitespace-nowrap">
+        <p className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold absolute top-16 bg-clip-text text-transparent bg-linear-to-b from-neutral-200 to-neutral-500 py-8 whitespace-nowrap">
           Hi! I&apos;m{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-b from-orange-200 to-orange-600 py-8">Prashant</span>
+          <span className="bg-clip-text text-transparent bg-linear-to-b from-orange-200 to-orange-600 py-8">Prashant</span>
         </p>
 
         {/* Image below the text with margin-top */}
         <img
           src="/PFP.jpg"
           alt="Prashant"
-          className="rounded-full h-80 w-50 absolute top-[11rem] left-1/2 transform -translate-x-1/2 opacity-85"
+          className="rounded-full h-80 w-50 absolute top-44 left-1/2 transform -translate-x-1/2 opacity-85"
         />
 
         {/* <div className="absolute top-[calc(0%+0rem)] right-0">
@@ -62,7 +62,7 @@ export default function Page() {
             }}
             fontSize="large"
             onClick={() => window.open("https://github.com/prashantjaybhaye")}
-            className="absolute top-[15rem] left-[calc(20%-2rem)]"
+            className="absolute top-60 left-[calc(20%-2rem)]"
           />
 
           <InstagramIcon
@@ -82,7 +82,7 @@ export default function Page() {
             }}
             fontSize="large"
             onClick={() => window.open("https://www.instagram.com/prashanttt__214")}
-            className="absolute top-[15rem] right-[calc(21%-2rem)]"
+            className="absolute top-60 right-[calc(21%-2rem)]"
           />
 
           <LinkedInIcon
@@ -101,8 +101,8 @@ export default function Page() {
               },
             }}
             fontSize="large"
-            onClick={() => { }}
-            className="absolute top-[20rem] left-[calc(20%-2rem)]"
+            onClick={() => window.open("https://www.linkedin.com/in/prashant-jaybhaye/")}
+            className="absolute top-80 left-[calc(20%-2rem)]"
           />
 
           <GraphicEqIcon sx={{
@@ -121,7 +121,7 @@ export default function Page() {
           }}
             fontSize="large"
             onClick={() => { }}
-            className="absolute top-[20rem] right-[calc(21%-2rem)]"
+            className="absolute top-80 right-[calc(21%-2rem)]"
           />
 
           <XIcon
@@ -141,7 +141,7 @@ export default function Page() {
             }}
             fontSize="large"
             onClick={() => { }}
-            className="absolute top-[25rem] left-[calc(20%-2rem)]"
+            className="absolute top-100 left-[calc(20%-2rem)]"
           />
 
           <CodeIcon
@@ -161,7 +161,7 @@ export default function Page() {
             }}
             fontSize="large"
             onClick={() => { }}
-            className="absolute top-[25rem] right-[calc(21%-2rem)]"
+            className="absolute top-100 right-[calc(21%-2rem)]"
           />
         </div>
 
@@ -171,15 +171,15 @@ export default function Page() {
           <Type />
         </div>
 
-        <div className='absolute top-[90rem] pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-400 to-black bg-clip-text text-center text-2xl font-semibold leading-none text-transparent dark:from-black dark:to-white'>
+        <div className='absolute top-360 pointer-events-none whitespace-pre-wrap bg-linear-to-b from-gray-400 to-black bg-clip-text text-center text-2xl font-semibold leading-none text-transparent dark:from-black dark:to-white'>
           Here are some of my
         </div>
 
-        <div className="absolute top-[92rem] pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-gray-400 to-black bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-black dark:to-gray-100 ">
+        <div className="absolute top-368 pointer-events-none whitespace-pre-wrap bg-linear-to-b from-gray-400 to-black bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-black dark:to-gray-100 ">
           ProJects
         </div>
 
-        <div className='absolute top-[106rem] w-full lg:w-auto px-4 lg:px-0'>
+        <div className='absolute top-424 w-full lg:w-auto px-4 lg:px-0'>
 
           <Projects />
 
