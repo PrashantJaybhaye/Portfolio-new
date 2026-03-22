@@ -39,8 +39,8 @@ export default function LoginPage() {
           className="absolute inset-0 h-full w-full object-cover grayscale-[0.3]"
         />
         {/* Gradient Overlay for bottom text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#121214]/90 via-[#121214]/40 to-[#121214]/20 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#121214] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#121214]/90 via-[#121214]/40 to-[#121214]/20 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#121214] via-transparent to-transparent" />
 
         {/* Top Text Mark */}
         <div className="relative z-10 flex items-center gap-2 p-8 text-white">
@@ -53,17 +53,17 @@ export default function LoginPage() {
       <div className="relative flex w-full items-center justify-center p-8 lg:w-1/2 border-l border-zinc-800/10 bg-[#121214] overflow-hidden">
         
         {/* Subtle Ambient Glow */}
-        <div className="absolute top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.015] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/1.5 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="w-full max-w-[400px] relative z-10">
 
           {/* Form Header */}
           <div className="mb-10 flex flex-col items-center text-center">
-            <div className="mb-6 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-red-500/10 to-red-500/5 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-red-500 border border-red-500/20 shadow-[0_0_15px_rgba(239,68,68,0.1)]">
+            <div className="mb-6 inline-flex items-center gap-1.5 rounded-full bg-linear-to-r from-red-500/10 to-red-500/5 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-red-500 border border-red-500/20 shadow-[0_0_15px_rgba(239,68,68,0.1)]">
               <Lock className="h-3 w-3" />
               Restricted Admin Access
             </div>
-            <h2 className="mb-2 text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-white to-zinc-500">
+            <h2 className="mb-2 text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-linear-to-br from-white to-zinc-500">
               Welcome Back
             </h2>
             <p className="text-sm text-zinc-400 font-medium">

@@ -57,7 +57,7 @@ export default function BlogPage() {
       <canvas ref={canvasRef} className="fixed inset-0 w-full h-full z-0 pointer-events-none" />
 
       {/* ── Ambient layers ── */}
-      <div className="fixed inset-0 z-[1] pointer-events-none">
+      <div className="fixed inset-0 z-1 pointer-events-none">
         {/* Fine grid */}
         <div className="absolute inset-0" style={{
           backgroundImage: "linear-gradient(rgba(255,255,255,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.035) 1px,transparent 1px)",
@@ -77,16 +77,16 @@ export default function BlogPage() {
 
         {/* ── Nav ── */}
         <nav className="flex items-center justify-between px-6 sm:px-12 pt-6 pb-2">
-          <Image src="/blog3.png" alt="Logo" width={48} height={48} loading="eager" className="opacity-80 hover:opacity-100 transition-opacity duration-300" />
+          <Image src="/blog4.png" alt="Logo" width={140} height={140} loading="eager" className="opacity-80 hover:opacity-100 transition-opacity duration-300" />
 
           {/* Centre pill */}
-          <div className="hidden sm:flex items-center gap-2.5 px-5 py-2 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md">
+          <div className="hidden sm:flex items-center gap-2.5 px-5 py-2 rounded-full border border-white/10 bg-white/4 backdrop-blur-md">
             <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/35">The Archive</span>
           </div>
 
           {/* Spacer — keeps logo + pill balanced */}
-          <div className="w-[48px]" />
+          <div className="w-[140px]" />
         </nav>
 
         {/* ── Corner Home badge — mirrors homepage Blog button, top-right ── */}
@@ -154,9 +154,9 @@ export default function BlogPage() {
           transition={{ delay: 0.55 }}
           className="flex items-center gap-4 px-6 sm:px-12 mb-8"
         >
-          <div className="h-px flex-1 bg-white/[0.05]" />
+          <div className="h-px flex-1 bg-white/5" />
           <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/15">All Entries</span>
-          <div className="h-px flex-1 bg-white/[0.05]" />
+          <div className="h-px flex-1 bg-white/5" />
         </motion.div>
 
         {/* ── Blog Cards ── */}
@@ -167,7 +167,7 @@ export default function BlogPage() {
           className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pb-24"
         >
           {/* Glassy frame */}
-          <div className="relative rounded-[2rem] overflow-hidden"
+          <div className="relative rounded-4xl overflow-hidden"
             style={{
               background: "rgba(255,255,255,0.012)",
               border: "1px solid rgba(255,255,255,0.07)",
