@@ -1,5 +1,3 @@
-// credits to sanatan dive 
-
 import React from 'react';
 import { motion } from "framer-motion";
 import { FaGithub } from 'react-icons/fa';
@@ -9,97 +7,94 @@ const Projects = () => {
   return (
     <section id='projects'>
       <div className='pb-4' >
-        {/* Project 2 */}
+        {/* Sidvia AI Project */}
         <div className='mb-8 flex flex-wrap lg:justify-center md:items-center'>
           <motion.div
-
             className='w-full md:w-1/3 lg:w-1/4 md:pr-8 lg:pr-0'>
-            <a href='#'>
-              <img src='/valentino.jpg' width={500} height={500} alt="Valentino" className='mb-6 rounded-xl max-w-full h-auto mx-auto lg:mx-[-100px] shadow-lg' />
+            <a href='https://github.com/PrashantJaybhaye/Sidvia-Interview-Agent'>
+              <img src='/sidvia.png' width={500} height={500} alt="Sidvia AI" className='mb-6 rounded-xl max-w-full h-auto mx-auto lg:mx-[-100px] shadow-lg' />
             </a>
-
           </motion.div>
           <motion.div
             className='w-full md:w-2/3 max-w-xl lg:w-3/4'>
-            <a href='#'>
-              <h3 className='mb-2 font-semibold text-2xl'>Valentino</h3>
+            <a href='https://github.com/PrashantJaybhaye/Sidvia-Interview-Agent'>
+              <h3 className='mb-2 font-semibold text-2xl'>Sidvia AI</h3>
             </a>
             <p className='mb-4 text-stone-400'>
-              You enter your username and the Twitter API fetch your profile and pass it on to Gemini API which has prompt to comment on the user's Posts , PFP , username
+              Smart Interactive Digital Voice-based Interview Agent. Practice and master your next job interview with real-time AI feedback. Features voice-based interactions, intelligent question generation, and comprehensive analytics.
             </p>
-            <a className='text-2xl  ' href='https://github.com/prashantjaybhaye/Valentino' target='_blank'>
+            <a className='text-2xl  ' href='https://github.com/PrashantJaybhaye/Sidvia-Interview-Agent' target='_blank'>
               <FaGithub />
             </a>
             <div className='mt-4 flex flex-wrap'>
-              <span className='mr-3 rounded bg-pink-700 p-2 text-sm font-medium text-stone-300'>React</span>
-              <span className='mr-3 rounded bg-pink-700 p-2 text-sm font-medium text-stone-300'>Tailwind</span>
-              <span className='mr-3 rounded bg-pink-700 p-2 text-sm font-medium text-stone-300'>TypeScript</span>
-              <span className='mr-3 rounded bg-pink-700 p-2 text-sm font-medium text-stone-300'>Twitter API</span>
+              <span className='mr-3 rounded bg-[#d6cc99] p-2 text-sm font-medium text-stone-900'>Next.js 15</span>
+              <span className='mr-3 rounded bg-[#d6cc99] p-2 text-sm font-medium text-stone-900'>React 19</span>
+              <span className='mr-3 rounded bg-[#d6cc99] p-2 text-sm font-medium text-stone-900'>Firebase</span>
+              <span className='mr-3 rounded bg-[#d6cc99] p-2 text-sm font-medium text-stone-900'>VAPI AI</span>
+              <span className='mr-3 rounded bg-[#d6cc99] p-2 text-sm font-medium text-stone-900'>Gemini AI</span>
             </div>
           </motion.div>
         </div>
+
         <div className='mb-8 flex flex-wrap lg:justify-center md:items-center'>
           <motion.div
             className='w-full md:w-1/3 lg:w-1/4 md:pr-8 lg:pr-0'>
-            <a href='https://github.com/prashantjaybhaye/Kagura'>
-              <img src='/kagura.jpg' width={500} height={500} className='mb-6 rounded-xl max-w-full h-auto mx-auto lg:mx-[-100px] shadow-lg' />
+            <a href='https://github.com/PrashantJaybhaye/AI-Agent'>
+              <img src='/siora.png' width={500} height={500} alt="Siora AI" className='mb-6 rounded-xl max-w-full h-auto mx-auto lg:mx-[-100px] shadow-lg' />
             </a>
 
           </motion.div>
           <motion.div
             className='w-full md:w-2/3 max-w-xl lg:w-3/4'>
-            <a href='https://github.com/prashantjaybhaye/Kagura'>
-              <h3 className='mb-2 font-semibold text-2xl'>Kagura</h3>
+            <a href='https://github.com/PrashantJaybhaye/AI-Agent'>
+              <h3 className='mb-2 font-semibold text-2xl'>Siora - AI Agent</h3>
             </a>
             <p className='mb-4 text-stone-400'>
-              A Real-time Chat React App with Cloudinary Image Upload and Authentication and Socket.io for real-time chat , and More AI feature soon to be added
+              A personal AI mindfulness companion that enables real-time voice interactions for stress relief and focus. Built with React Native, Expo, LiveKit, and ElevenLabs to provide an immersive, intelligent meditation experience.
             </p>
-            <a className='text-2xl  ' href='https://github.com/prashantjaybhaye/Kagura' target='_blank'>
+            <a className='text-2xl  ' href='https://github.com/PrashantJaybhaye/AI-Agent' target='_blank'>
               <FaGithub />
             </a>
             <div className='mt-4 flex flex-wrap'>
-              <span className='mr-3 rounded bg-orange-700 p-2 text-sm font-medium text-stone-300'>React</span>
-              <span className='mr-3 rounded bg-orange-700 p-2 text-sm font-medium text-stone-300'>Socket.io</span>
-              <span className='mr-3 rounded bg-orange-700 p-2 text-sm font-medium text-stone-300'>Typescript</span>
-
+              <span className='mr-3 rounded bg-[#0a4174] p-2 text-sm font-medium text-stone-300'>React Native</span>
+              <span className='mr-3 rounded bg-[#0a4174] p-2 text-sm font-medium text-stone-300'>Expo</span>
+              <span className='mr-3 rounded bg-[#0a4174] p-2 text-sm font-medium text-stone-300'>LiveKit</span>
+              <span className='mr-3 rounded bg-[#0a4174] p-2 text-sm font-medium text-stone-300'>ElevenLabs</span>
+              <span className='mr-3 rounded bg-[#0a4174] p-2 text-sm font-medium text-stone-300'>AI Voice</span>
             </div>
           </motion.div>
         </div>
-
-        {/* Project 1 */}
         <div className='mb-8 flex flex-wrap lg:justify-center md:items-center'>
           <motion.div
-
             className='w-full md:w-1/3 lg:w-1/4 md:pr-8 lg:pr-0'>
-            <a href='https://github.com/prashantjaybhaye/Power-Rangers-FRONTEND--PUBLIC?tab=readme-ov-file'>
-              <img src='/rangers.jpg' width={500} height={500} alt="Red Ranger" className='mb-6 rounded-xl max-w-full h-auto mx-auto lg:mx-[-100px] shadow-lg' />
+            <a href='https://github.com/PrashantJaybhaye/Smart-Allocation-system'>
+              <img src='/smart-allocation.png' width={500} height={500} alt="Smart Allocation System" className='mb-6 rounded-xl max-w-full h-auto mx-auto lg:mx-[-100px] shadow-lg' />
             </a>
           </motion.div>
           <motion.div
-
             className='w-full md:w-2/3 max-w-xl lg:w-3/4'>
-            <a href='https://github.com/prashantjaybhaye/Power-Rangers-FRONTEND--PUBLIC?tab=readme-ov-file'>
-              <h3 className='mb-2 font-semibold text-2xl'>Red Ranger</h3>
+            <a href='https://smart-allocation-system.onrender.com' target='_blank'>
+              <h3 className='mb-2 font-semibold text-2xl'>Smart Allocation System</h3>
             </a>
             <p className='mb-4 text-stone-400'>
-              Use Twitter’s API to allow users to fetch their profile details (e.g., username, profile picture) by entering their X username. This information can be used to assign a Ranger to the user. </p>
-            <a className='text-2xl  ' href='https://github.com/prashantjaybhaye/Power-Rangers-FRONTEND--PUBLIC?tab=readme-ov-file' target='_blank'>
-              <FaGithub />
-            </a>
-
+              A robust Flask-based system built to automate course allocation for university students. Features secure user management, CSV/Excel data processing, and an intelligent allocation algorithm to manage large volumes of academic data effectively.
+            </p>
+            <div className='flex gap-4 items-center'>
+              <a className='text-2xl  ' href='https://github.com/PrashantJaybhaye/Smart-Allocation-system' target='_blank'>
+                <FaGithub />
+              </a>
+              <a className='text-sm text-stone-500 hover:text-stone-300 underline font-medium' href='https://smart-allocation-system.onrender.com' target='_blank'>
+                Live Demo
+              </a>
+            </div>
             <div className='mt-4 flex flex-wrap'>
-              <span className='mr-3 rounded bg-red-700 p-2 text-sm font-medium text-stone-300'>React</span>
-              <span className='mr-3 rounded bg-red-700 p-2 text-sm font-medium text-stone-300'>Kinde</span>
-              <span className='mr-3 rounded bg-red-700 p-2 text-sm font-medium text-stone-300'>TypeScript</span>
-              <span className='mr-3 rounded bg-red-700 p-2 text-sm font-medium text-stone-300'>ShadCN</span>
+              <span className='mr-3 rounded bg-green-700 p-2 text-sm font-medium text-stone-300'>Flask</span>
+              <span className='mr-3 rounded bg-green-700 p-2 text-sm font-medium text-stone-300'>Python</span>
+              <span className='mr-3 rounded bg-green-700 p-2 text-sm font-medium text-stone-300'>SQLite</span>
+              <span className='mr-3 rounded bg-green-700 p-2 text-sm font-medium text-stone-300'>Tailwind CSS</span>
             </div>
           </motion.div>
         </div>
-
-
-        {/* project 3 */}
-
-
       </div>
     </section>
   );
