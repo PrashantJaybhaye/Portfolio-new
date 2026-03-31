@@ -4,10 +4,14 @@ export function Type() {
   return (
     <>
       <TypingAnimation>
-        I am a Full Stack Web Developer - For FRONTEND - Html, CSS, JS, React, Tailwind, NextJS -
-        For BACKEND - NodeJS, Express, MongoDB, Prisma, Postgres, Firebase - For Deployments -
-        AWS, Vercel, Railway, Cloudflare - Meanwhile I do DSA & Leetcode - Currently I am learning NextJS
-        This Portfolio is made using NextJS
+        I am a Computer Science student & aspiring developer
+
+        Building modern applications with React, Next.js & TypeScript
+        Backend with Node.js, MongoDB, Firebase & Drizzle (Neon)
+
+        Creator of Sidvia & Exploring Mobile & Game Development
+        
+        Focused on building scalable products and solving complex problems
       </TypingAnimation>
     </>
   )

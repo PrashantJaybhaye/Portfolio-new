@@ -28,7 +28,7 @@ export default function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
-    
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -91,13 +91,13 @@ export default function Contact() {
                     gwscary@gmail.com
                   </a>
                 </div>
-                
+
                 <div className="flex flex-col gap-3">
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">Social</span>
                   <div className="flex flex-wrap gap-4 md:gap-6">
-                    <a href="#" className="text-sm md:text-base text-zinc-400 hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">GitHub</a>
-                    <a href="#" className="text-sm md:text-base text-zinc-400 hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">LinkedIn</a>
-                    <a href="#" className="text-sm md:text-base text-zinc-400 hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">Twitter</a>
+                    <a href="https://github.com/prashantjaybhaye" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base text-zinc-400 hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">GitHub</a>
+                    <a href="https://www.linkedin.com/in/prashant-jaybhaye/" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base text-zinc-400 hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">LinkedIn</a>
+                    <a href="https://x.com/prashantjaybhye" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base text-zinc-400 hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">Twitter/X</a>
                   </div>
                 </div>
               </div>
@@ -116,9 +116,9 @@ export default function Contact() {
                           <FormItem>
                             <FormLabel className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-2.5 block">Name</FormLabel>
                             <FormControl>
-                              <Input 
-                                placeholder="Your Name" 
-                                {...field} 
+                              <Input
+                                placeholder="Your Name"
+                                {...field}
                                 className="bg-zinc-950/50 border-zinc-800/50 focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/20 h-12 md:h-14 rounded-xl md:rounded-2xl px-5 text-white placeholder:text-zinc-700 transition-all font-medium text-sm"
                               />
                             </FormControl>
@@ -133,9 +133,9 @@ export default function Contact() {
                           <FormItem>
                             <FormLabel className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-2.5 block">Email</FormLabel>
                             <FormControl>
-                              <Input 
-                                placeholder="your@email.com" 
-                                {...field} 
+                              <Input
+                                placeholder="your@email.com"
+                                {...field}
                                 className="bg-zinc-950/50 border-zinc-800/50 focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/20 h-12 md:h-14 rounded-xl md:rounded-2xl px-5 text-white placeholder:text-zinc-700 transition-all font-medium text-sm"
                               />
                             </FormControl>
@@ -151,10 +151,10 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-2.5 block">Message</FormLabel>
                           <FormControl>
-                            <Textarea 
-                              placeholder="How can I help you?" 
+                            <Textarea
+                              placeholder="How can I help you?"
                               className="bg-zinc-950/50 border-zinc-800/50 focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/20 min-h-[140px] md:min-h-[160px] rounded-xl md:rounded-2xl px-5 py-4 text-white placeholder:text-zinc-700 transition-all font-medium text-sm resize-none"
-                              {...field} 
+                              {...field}
                             />
                           </FormControl>
                           <FormMessage className="text-[10px] uppercase font-bold text-red-500 mt-1.5" />
@@ -207,7 +207,7 @@ export default function Contact() {
                 </p>
               </div>
 
-              <button 
+              <button
                 onClick={() => setIsSuccess(false)}
                 className="px-7 py-2.5 rounded-full border border-zinc-800 text-zinc-500 hover:text-white hover:border-zinc-700 transition-all text-[10px] font-bold uppercase tracking-wider bg-zinc-900/50"
               >

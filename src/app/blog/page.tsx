@@ -143,7 +143,7 @@ export default function BlogPage() {
             className="text-sm sm:text-base font-semibold tracking-[0.3em] uppercase"
             style={{ color: "rgba(255,255,255,0.28)" }}
           >
-            Random Bits of Knowledge
+            Insights on Full Stack, DSA & Next.js
           </motion.p>
         </section>
 

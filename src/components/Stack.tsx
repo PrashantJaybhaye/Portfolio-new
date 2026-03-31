@@ -1,14 +1,14 @@
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
-import { FaHtml5, FaCss3Alt, FaNodeJs, FaGithub } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaNodeJs, FaGithub, FaAws } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { RiReactjsLine, RiTailwindCssFill } from 'react-icons/ri';
 import { DiMongodb } from 'react-icons/di';
-import { SiExpress, SiNextdotjs, SiTypescript, SiDocker, SiPrisma, SiPostgresql, SiFirebase, SiVercel, SiCloudflare, SiBulma } from 'react-icons/si';
+import { SiExpress, SiNextdotjs, SiTypescript, SiDocker, SiPrisma, SiPostgresql, SiFirebase, SiVercel, SiCloudflare, SiBulma, SiPython, SiRailway } from 'react-icons/si';
 
 export function Stack() {
   return (
-    <div className="absolute top-[48rem] flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+    <div className="absolute top-210 sm:top-192 flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent">
+      <span className="pointer-events-none whitespace-pre-wrap bg-linear-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         Stacks
       </span>
       <OrbitingCircles iconSize={40} radius={90} reverse speed={2}>
@@ -36,9 +36,10 @@ export function Stack() {
         <SiFirebase className="text-7xl text-yellow-500" />
         <SiVercel className="text-7xl text-gray-500" />
         <SiCloudflare className="text-7xl text-orange-500" />
-        <SiBulma className="text-7xl text-purple-500" />
+        <SiPython className="text-7xl text-blue-400" />
+        <FaAws className="text-7xl text-orange-400" />
+        <SiRailway className="text-7xl text-white" />
       </OrbitingCircles>
-
     </div>
   );
 }

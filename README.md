@@ -1,89 +1,75 @@
-# 👨‍💻 Prashant Jaybhaye
+# 👨‍💻 Prashant Jaybhaye | Full Stack Developer
 
-Welcome to my personal portfolio and digital playground! This repository houses my professional portfolio website, an interactive 3D experience, and a high-end editorial blog.
+Welcome to my personal portfolio! This project is a curated showcase of my journey as a Full Stack Developer, featuring interactive experiences, modern design, and a custom editorial blog.
 
 ---
 
 ## 🌟 Vision & Purpose
 
-This project is built to showcase my journey as a developer, highlighting my technical skills in modern web development, my design aesthetic, and my thoughts on technology through an integrated blog platform.
+This portfolio is built to demonstrate high-end web performance, responsive motion design, and a robust technical foundation. It serves as both a professional business card and a digital playground where I experiment with new technologies like **AI integration**, **3D spatial UI**, and **scalable architectures**.
 
 ---
 
 ## 🚀 Key Highlights
 
-- **✨ Modern & Aesthetic UI**: A premium, high-contrast dark theme with glassmorphism and smooth motion design.
-- **🌍 3D Spatial Experience**: An interactive 3D globe and immersive elements built with **React Three Fiber**.
-- **📝 High-End Editorial Blog**: A custom-built, magazine-style blog platform for sharing knowledge and insights.
-- **🔒 Secure Admin CMS**: A restricted dashboard to manage my projects, blog posts, and site metrics.
-- **🛠️ Robust Architecture**: Optimized for performance and SEO using **Next.js 15** and **React 19**.
+- **✨ Premium UI/UX**: Built with a "dark-mode first" aesthetic, featuring glassmorphism, smooth Framer Motion transitions, and a customized grid layout.
+- **🌍 Immersive 3D**: Features an interactive 3D globe and spatial elements built with **Three.js** and **React Three Fiber**.
+- **📋 Project Portfolio**: Showcases my major projects including **Sidvia**, **AI Agent**, and the **Smart Allocation System**.
+- **📝 Editorial Blog**: A custom-built blog platform for sharing insights, with support for Markdown and high-contrast typography.
+- **🔒 Secure Admin CMS**: A full-featured admin dashboard (Prisma + Auth) to manage content, projects, and contacts in real-time.
 
 ---
 
-## 🛠️ Technical Arsenal
+## 🛠️ Technical Stack
 
-### **Frontend & Design**
+### **Frontend & Motion**
+- **Framework:** Next.js 16 (App Router)
+- **Library:** React 19
+- **Styling:** Tailwind CSS 4, shadcn/ui, & Magic UI
+- **Animations:** Framer Motion (Motion 12) & Aceternity UI
+- **3D Graphics:** React Three Fiber & Three.js
 
-- **Framework:** Next.js 15 (App Router)
-- **Styling:** Tailwind CSS 4 & Vanilla CSS
-- **Animations:** Framer Motion & React Three Fiber
-- **Icons:** Lucide React & Material UI Icons
-
-### **Backend & Infrastructure**
-
-- **Authentication:** Next-Auth (Credentials based)
-- **Database ORM:** Prisma
-- **Database:** PostgreSQL
-- **Analytics:** Vercel Analytics
-
----
-
-## 📸 Project Showcase
-
-The portfolio includes several key sections:
-
-- **Hero Section:** Featuring my personal brand and identity.
-- **Projects Grid:** A curated list of my best work with interactive cards.
-- **Tech Stack:** A visual representation of my current skills and tools.
-- **The Archive (Blog):** A dedicated space for my technical writing.
+### **Backend & Storage**
+- **Database:** PostgreSQL (with Prisma ORM)
+- **Authentication:** Next-Auth.js
+- **CMS Integration:** Custom Prisma-based CMS
+- **Deployment:** Vercel
 
 ---
 
-## ⚙️ Setting Up Locally
+## ⚙️ Local Development
 
-If you'd like to explore the code or run this project on your machine:
+### Prerequisites
+- **Node.js 18+**
+- **PostgreSQL** instance
 
-### 1. Prerequisite
-
-Ensure you have **Node.js 18+** and a **PostgreSQL** instance ready.
-
-### 2. Installation
-
+### 1. Installation
 ```bash
 git clone https://github.com/prashantjaybhaye/Portfolio-new.git
 cd Portfolio-new
 npm install
 ```
 
-### 3. Environment Variables
-
-Create a `.env` file:
-
+### 2. Environment Configuration
+Create a `.env` file in the root directory:
 ```env
 DATABASE_URL="postgresql://user:password@localhost:5432/portfolio"
-NEXTAUTH_SECRET="your-32-char-secret"
+NEXTAUTH_SECRET="your-32-character-secret"
 NEXTAUTH_URL="http://localhost:3000"
+
+# Optional Cloudinary for blog images
+CLOUDINARY_CLOUD_NAME="..."
+CLOUDINARY_API_KEY="..."
+CLOUDINARY_API_SECRET="..."
 ```
 
-### 4. Database Setup
-
+### 3. Database Initialization
 ```bash
 npx prisma generate
 npx prisma db push
 ```
 
-### 5. Launch
-
+### 4. Running the Dev Server
 ```bash
 npm run dev
 ```
@@ -93,9 +79,9 @@ npm run dev
 ## 📜 Available Commands
 
 - `npm run dev` – Launch development server.
-- `npm run build` – Create production-ready build.
-- `npm run lint` – Run linting checks.
-- `npm run create-admin` – Script to generate an admin user for the CMS.
+- `npm run build` – Prepare project for production.
+- `npm run create-admin` – Custom script to generate an admin account for the CMS.
+- `npx prisma studio` – Open the Prisma UI to explore your local database.
 
 ---
 
@@ -108,5 +94,5 @@ npm run dev
 ---
 
 <div align="center">
-  <p>© 2026 Developed by <b>Prashant Jaybhaye</b>. Built with Next.js, PlanetScale & Vercel.</p>
+  <p>© 2026 Developed by <b>Prashant Jaybhaye</b>. Built with ❤️ and Next.js.</p>
 </div>

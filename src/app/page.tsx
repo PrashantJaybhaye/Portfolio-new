@@ -33,18 +33,12 @@ export default function Page() {
 
         {/* Image below the text with margin-top */}
         <img
-          src="/PFP.jpg"
+          src="/me.jpg"
           alt="Prashant"
           className="rounded-full h-80 w-50 absolute top-44 left-1/2 transform -translate-x-1/2 opacity-85"
         />
 
-        {/* <div className="absolute top-[calc(0%+0rem)] right-0">
-        <Number />
-        </div> */}
-
         <div className="cursor-pointer ">
-
-
           <GitHubIcon
             sx={{
               background: "linear-gradient(to bottom, #F07B50, #FF8C00)",
@@ -179,7 +173,7 @@ export default function Page() {
           ProJects
         </div>
 
-        <div className='absolute top-424 w-full lg:w-auto px-4 lg:px-0'>
+        <div className='absolute top-410 sm:top-424 w-full lg:w-auto px-4 lg:px-0'>
 
           <Projects />
 
