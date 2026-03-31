@@ -23,9 +23,14 @@ const Projects = () => {
             <p className='mb-4 text-stone-400'>
               Smart Interactive Digital Voice-based Interview Agent. Practice and master your next job interview with real-time AI feedback. Features voice-based interactions, intelligent question generation, and comprehensive analytics.
             </p>
-            <a className='text-2xl  ' href='https://github.com/PrashantJaybhaye/Sidvia-Interview-Agent' target='_blank'>
-              <FaGithub />
-            </a>
+            <div className='flex gap-4 items-center'>
+              <a className='text-2xl  ' href='https://github.com/PrashantJaybhaye/Sidvia-Interview-Agent' target='_blank'>
+                <FaGithub />
+              </a>
+              <a className='text-sm text-stone-500 hover:text-stone-300 underline font-medium' href='https://sidvia.vercel.app/' target='_blank'>
+                Live Demo
+              </a>
+            </div>
             <div className='mt-4 flex flex-wrap'>
               <span className='mr-3 rounded bg-[#d6cc99] p-2 text-sm font-medium text-stone-900'>Next.js 15</span>
               <span className='mr-3 rounded bg-[#d6cc99] p-2 text-sm font-medium text-stone-900'>React 19</span>
@@ -36,6 +41,7 @@ const Projects = () => {
           </motion.div>
         </div>
 
+        {/* Siora AI */}
         <div className='mb-8 flex flex-wrap lg:justify-center md:items-center'>
           <motion.div
             className='w-full md:w-1/3 lg:w-1/4 md:pr-8 lg:pr-0'>
@@ -64,6 +70,8 @@ const Projects = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* smart allocation system */}
         <div className='mb-8 flex flex-wrap lg:justify-center md:items-center'>
           <motion.div
             className='w-full md:w-1/3 lg:w-1/4 md:pr-8 lg:pr-0'>
@@ -88,10 +96,10 @@ const Projects = () => {
               </a>
             </div>
             <div className='mt-4 flex flex-wrap'>
-              <span className='mr-3 rounded bg-green-700 p-2 text-sm font-medium text-stone-300'>Flask</span>
-              <span className='mr-3 rounded bg-green-700 p-2 text-sm font-medium text-stone-300'>Python</span>
-              <span className='mr-3 rounded bg-green-700 p-2 text-sm font-medium text-stone-300'>SQLite</span>
-              <span className='mr-3 rounded bg-green-700 p-2 text-sm font-medium text-stone-300'>Tailwind CSS</span>
+              <span className='mr-3 rounded bg-[#abca9e] p-2 text-sm font-medium text-stone-900'>Flask</span>
+              <span className='mr-3 rounded bg-[#abca9e] p-2 text-sm font-medium text-stone-900'>Python</span>
+              <span className='mr-3 rounded bg-[#abca9e] p-2 text-sm font-medium text-stone-900'>SQLite</span>
+              <span className='mr-3 rounded bg-[#abca9e] p-2 text-sm font-medium text-stone-900'>Tailwind CSS</span>
             </div>
           </motion.div>
         </div>
