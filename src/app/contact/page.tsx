@@ -3,6 +3,7 @@
 import Contact from "../blog/components/contact"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import { LiquidButton } from "@/components/ui/liquid-glass-button"
 
 export default function ContactPage() {
   return (
@@ -10,14 +11,15 @@ export default function ContactPage() {
       {/* Background Mask - Subtle Depth Only */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(24,24,27,0.4)_0%,transparent_50%)]" />
 
-      {/* Simplified Navigation */}
+      {/* Simplified Navigation — Liquid Glass */}
       <div className="fixed top-4 left-4 md:top-8 md:left-8 z-50">
-        <Link 
-          href="/" 
-          className="group flex items-center gap-3 px-4 py-2.5 md:px-6 md:py-3 rounded-xl md:rounded-2xl bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 shadow-2xl"
-        >
-          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-zinc-400 group-hover:text-white transition-colors">Home</span>
+        <Link href="/" aria-label="Back to home">
+          <LiquidButton size="default" variant="default" className="pointer-events-none gap-3 px-5 py-2.5">
+            <span className="inline-flex items-center gap-2">
+              <ArrowLeft className="w-4 h-4 text-white" />
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-zinc-300">Home</span>
+            </span>
+          </LiquidButton>
         </Link>
       </div>
 

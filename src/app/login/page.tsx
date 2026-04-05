@@ -2,12 +2,15 @@
 import { useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import { Lock, Loader2, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+import { Lock, Loader2, ArrowRight, Eye, EyeOff, ArrowLeft } from 'lucide-react'
+import { LiquidButton } from '@/components/ui/liquid-glass-button'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
   const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -43,15 +46,24 @@ export default function LoginPage() {
         <div className="absolute inset-0 bg-linear-to-t from-[#121214] via-transparent to-transparent" />
 
         {/* Top Text Mark */}
-        <div className="relative z-10 flex items-center gap-2 p-8 text-white">
-          <span className="font-bold text-xl tracking-tight">Prashant Jaybhaye</span>
-        </div>
+        <Link href="/" className="relative z-10 flex items-center gap-2 p-8 text-white group">
+          <span className="font-bold text-xl tracking-tight group-hover:opacity-80 transition-opacity">Prashant Jaybhaye</span>
+        </Link>
 
       </div>
 
       {/* Right Panel - Form (Dark Mode) */}
       <div className="relative flex w-full items-center justify-center p-8 lg:w-1/2 border-l border-zinc-800/10 bg-[#121214] overflow-hidden">
         
+        {/* Mobile-only home link — Apple Liquid Glass */}
+        <div className="absolute top-6 left-6 z-20 lg:hidden">
+          <Link href="/" aria-label="Back to home">
+            <LiquidButton size="icon" variant="default" className="pointer-events-none">
+              <ArrowLeft className="h-4 w-4 text-white" />
+            </LiquidButton>
+          </Link>
+        </div>
+
         {/* Subtle Ambient Glow */}
         <div className="absolute top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/1.5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -73,14 +85,16 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label className="text-[12px] font-bold text-zinc-400 uppercase tracking-wider ml-1">Email Address</label>
+              <label htmlFor="email" className="text-[12px] font-bold text-zinc-400 uppercase tracking-wider ml-1">Email Address</label>
               <input
+                id="email"
+                name="email"
                 type="email"
+                autoComplete="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="prashant@example.com"
-                className="w-full rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-sm font-medium text-white placeholder:text-zinc-500 focus:outline-none focus:border-zinc-500 focus:bg-zinc-900 transition-all shadow-sm hover:bg-zinc-900/80"
-                style={{ WebkitBoxShadow: '0 0 0px 1000px #18181b inset', WebkitTextFillColor: 'white' }}
+                className="w-full rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-sm font-medium text-white placeholder:text-zinc-500 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500/30 focus:bg-zinc-900 transition-all shadow-sm hover:bg-zinc-900/80 autofill:shadow-[0_0_0px_1000px_#18181b_inset] autofill:[-webkit-text-fill-color:white]"
                 required
                 disabled={isSubmitting}
               />
@@ -88,40 +102,56 @@ export default function LoginPage() {
 
             <div className="space-y-2">
               <div className="flex items-center justify-between ml-1">
-                <label className="text-[12px] font-bold text-zinc-400 uppercase tracking-wider">Password</label>
+                <label htmlFor="password" className="text-[12px] font-bold text-zinc-400 uppercase tracking-wider">Password</label>
                 <a href="#" className="text-[12px] font-medium text-zinc-500 hover:text-white transition-colors">
                   Forgot?
                 </a>
               </div>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••••••"
-                className="w-full rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-sm font-medium text-white placeholder:text-zinc-500 focus:outline-none focus:border-zinc-500 focus:bg-zinc-900 transition-all shadow-sm hover:bg-zinc-900/80"
-                style={{ WebkitBoxShadow: '0 0 0px 1000px #18181b inset', WebkitTextFillColor: 'white' }}
-                required
-                disabled={isSubmitting}
-              />
+              <div className="relative">
+                <input
+                  id="password"
+                  name="password"
+                  type={showPassword ? 'text' : 'password'}
+                  autoComplete="current-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••••••"
+                  className="w-full rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 pr-12 text-sm font-medium text-white placeholder:text-zinc-500 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500/30 focus:bg-zinc-900 transition-all shadow-sm hover:bg-zinc-900/80 autofill:shadow-[0_0_0px_1000px_#18181b_inset] autofill:[-webkit-text-fill-color:white]"
+                  required
+                  disabled={isSubmitting}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-zinc-500 hover:text-white transition-colors rounded-md"
+                  tabIndex={-1}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                >
+                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                </button>
+              </div>
             </div>
 
-            <button
+            <LiquidButton
               type="submit"
               disabled={isSubmitting}
-              className="group relative mt-2 w-full flex items-center justify-center gap-2 rounded-xl bg-white py-3 text-[14px] font-bold text-black transition-all hover:bg-zinc-200 active:scale-[0.98] disabled:opacity-70 disabled:active:scale-100 shadow-[0_4px_14px_rgba(255,255,255,0.08)] hover:shadow-[0_4px_20px_rgba(255,255,255,0.15)]"
+              size="xl"
+              className="mt-2 w-full text-[14px] font-bold text-white"
             >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="h-4 w-4 animate-spin text-black" />
-                  <span>Authenticating...</span>
-                </>
-              ) : (
-                <>
-                  <span>Initialize Session</span>
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </>
-              )}
-            </button>
+              <span className="inline-flex items-center gap-2">
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin text-white" />
+                    <span>Authenticating...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Initialize Session</span>
+                    <ArrowRight className="h-4 w-4 text-white" />
+                  </>
+                )}
+              </span>
+            </LiquidButton>
           </form>
 
           <div className="mt-16 text-center">

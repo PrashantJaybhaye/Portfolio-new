@@ -1,10 +1,10 @@
-import NextAuth from "next-auth"
+import NextAuth, { NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import { prisma } from "@/lib/prisma"
 import * as bcrypt from 'bcrypt'
 
-const handler = NextAuth({
+export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     CredentialsProvider({
@@ -20,7 +20,7 @@ const handler = NextAuth({
           where: { email: credentials.email }
         })
 
-        if (!user) return null
+        if (!user || !user.password) return null
         
         const passwordMatch = await bcrypt.compare(
           credentials.password,
@@ -29,7 +29,11 @@ const handler = NextAuth({
 
         if (!passwordMatch) return null
 
-        return user
+        return {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+        }
       }
     })
   ],
@@ -41,8 +45,11 @@ const handler = NextAuth({
       return session
     },
   },
+
   session: { strategy: 'jwt' },
   secret: process.env.NEXTAUTH_SECRET,
-})
+}
 
-export { handler as GET, handler as POST } 
+const handler = NextAuth(authOptions)
+
+export { handler as GET, handler as POST }

@@ -77,7 +77,7 @@ export default function BlogPage() {
 
         {/* ── Nav ── */}
         <nav className="flex items-center justify-between px-6 sm:px-12 pt-6 pb-2">
-          <Image src="/blog4.png" alt="Logo" width={140} height={140} loading="eager" className="opacity-80 hover:opacity-100 transition-opacity duration-300" />
+          <Image src="/blog4.png" alt="Logo" width={140} height={140} loading="eager" className="opacity-80 hover:opacity-100 transition-opacity duration-300 w-auto h-auto" />
 
           {/* Centre pill */}
           <div className="hidden sm:flex items-center gap-2.5 px-5 py-2 rounded-full border border-white/10 bg-white/4 backdrop-blur-md">

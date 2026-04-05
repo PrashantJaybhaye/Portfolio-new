@@ -1,10 +1,18 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 
 // GET /api/admin/comments
 export async function GET() {
   try {
+    const session = await getServerSession(authOptions)
+    if (!session || session.user?.email !== process.env.ADMIN_EMAIL) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const comments = await prisma.comment.findMany({
+
       include: {
         author: {
           select: { name: true }
